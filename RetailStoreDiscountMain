@@ -1,0 +1,60 @@
+import java.lang.Math;
+import java.util.Scanner;
+
+
+public class Main
+{
+  public static void main(String[] args) 
+  {
+    double  dis,s;
+    double amount = 0;
+    Scanner myObj = new Scanner(System.in);
+    System.out.println("Enter what you are buying (Groceries / Others) : ");
+    String itemName = myObj.nextLine();
+    
+    if (itemName == "Others");
+    {
+      Scanner myObj1 = new Scanner(System.in);
+      System.out.println("Who are you (Employee / Affilate / OldCustomer) : ");
+      String positionName = myObj1.nextLine();
+      
+      System.out.println("Enter the bill amount (in $) : ");
+      int billprice = myObj1.nextInt();
+      
+      double extBill = billprice / 100;
+      extBill = (Math.round(extBill));
+      
+        if (positionName == "Employee")
+        {
+            dis=30;
+            s=100-dis;
+            amount = (amount - extBill);
+            amount= (s*billprice)/100;
+            System.out.println("Congrat's you only need to pay : " +amount);
+            System.out.println("Thank you, Please visit us again");
+        }
+        if (positionName == "Affilate")
+        {
+            dis=10;
+            s=100-dis;
+            amount = (amount - extBill);
+            amount= (s*billprice)/100;
+            System.out.println("Congrat's you only need to pay : " +amount);
+            System.out.println("Thank you, Please visit us again");
+        }
+        if (positionName == "OldCustomer")
+        {
+            dis=5;
+            s=100-dis;
+            amount = (amount - extBill);
+            amount= (s*billprice)/100;
+            System.out.println("Congrat's you only need to pay : " +amount);
+            System.out.println("Thank you, Please visit us again");
+        }
+    }
+    if (itemName == "Groceries");
+    {
+      System.out.println("You are not eligeble for discount on Groceries");
+    }
+  }
+}
