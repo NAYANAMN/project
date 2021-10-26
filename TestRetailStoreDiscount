@@ -1,0 +1,33 @@
+package retailStoreDiscount;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestRetailStoreDiscount 
+{
+	RetailStoreDiscount obj = new RetailStoreDiscount();
+	
+	@Test
+	public void testpurchase() {
+		assertEquals("Output must be 1500.0", purchase(1500.0d),RetailStoreDiscount.purchase("Groceries", 1500.0, "Employee"));
+		
+	}
+	@Test
+	public void testpurchase() {
+		assertEquals("Output must be 665.0", purchase(665.0d),RetailStoreDiscount.purchase("Others", 1000.0, "Employee"));
+		
+	}
+  
+  @Test
+	public void testpurchase() {
+		assertEquals("Output must be 855.0", purchase(855.0d),RetailStoreDiscount.purchase("Others", 1000.0, "Affilate"));
+		
+	}
+  
+	private Object purchase(double amount) 
+	{
+		return amount;
+	}
+
+}
