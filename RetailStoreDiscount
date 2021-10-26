@@ -1,0 +1,60 @@
+package retailStoreDiscount;
+
+public class RetailStoreDiscount
+{
+  public static double purchase (String itemName, double d, String positionName) 
+  {
+    double  dis,s;
+    double amount = 0;
+   
+    switch(itemName)
+    {
+    	case "Groceries":
+    		
+    		amount = d; 		
+    		break;
+     
+    	case "Others":
+    
+    		if(d <= 0);
+    		
+    		else
+    		{
+    				
+    		double extBill = (d / 100) * 5;
+    	//	extBill = (Math.round(extBill));
+      
+    		switch (positionName)
+    		{
+    			case "Employee":
+    				
+    			dis=30;
+    			s=100-dis;
+    			amount = (d - extBill);
+    			amount= (s*amount)/100;
+    			break;
+
+    			case "Affilate":
+
+    			dis=10;
+    			s=100-dis;
+    			amount = (d - extBill);
+    			amount= (s*amount)/100;
+    			break;
+    		
+    			case "OldCustomer":
+    		
+    			dis=5;
+    			s=100-dis;
+    			amount = (d - extBill);
+    			amount= (s*amount)/100;
+    			break;
+    		}
+    		}
+    		break;
+    	default:
+    		   break;
+    }
+    return amount;
+  }
+}
